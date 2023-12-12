@@ -18,3 +18,23 @@ As you can see, you can mutate the object [5, 6, 7] itself and the variable s wi
 
 An array is declared as const s = [5, 7, 2]. Change the array to [2, 5, 7] using various element assignments.
 
+----
+
+```js
+const s = [5, 7, 2];
+function editInPlace() {
+  // Only change code below this line
+  "use strict";
+  s[0] = 2;
+  s[1] = 5;
+  s[2] = 7;
+  console.log(s)
+  // Using s = [2, 5, 7] would be invalid
+  
+  // Only change code above this line
+}
+editInPlace();
+```
+Code Explanation
+
+Trying to reassign a read-only const variable will throw an error, but by using various element assignment you can access and change the value of an array just like you would with let or var.
