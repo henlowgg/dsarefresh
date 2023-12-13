@@ -6,9 +6,17 @@ const result = {
   function makeList(arr) {
     // Only change code below this line
     const failureItems = [];
+    for (let i = 0; i < arr.length; i++){
+        failureItems.push(`<li class="text-warning">${arr[i]}</li>`)
+    }
+
     // Only change code above this line
   
     return failureItems;
   }
   
   const failuresList = makeList(result.failure);
+
+//   make a for let loop to iterate through the result{failure[]} array and return results in a list 'li'
+
+// make sure to use back ticks `` when writing out the ${ImRandomTextYay} syntax
