@@ -19,3 +19,4 @@ const makeServerRequest = new Promise((resolve, reject) => {
 
 
 // juist write a catch error function for it 👍
+// oh thats all of es6
