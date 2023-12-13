@@ -5,9 +5,11 @@ If you want to find the word the in the string The dog chased the cat, you could
 
 JavaScript has multiple ways to use regexes. One way to test a regex is using the .test() method. The .test() method takes the regex, applies it to a string (which is placed inside the parentheses), and returns true or false if your pattern finds something or not.
 
+```js
 let testStr = "freeCodeCamp";
 let testRegex = /Code/;
 testRegex.test(testStr);
+```
 The test method here returns true.
 
 Apply the regex myRegex on the string myString using the .test() method.
