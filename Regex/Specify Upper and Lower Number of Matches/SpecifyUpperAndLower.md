@@ -13,3 +13,31 @@ multipleA.test(A2);
 The first test call would return true, while the second would return false.
 
 Change the regex ohRegex to match the entire phrase Oh no only when it has 3 to 6 letter h's.
+
+----------------
+
+Problem Explanation
+Remember /a{2,4}/ will return true as long as there are between two to four a’s together. It will return true for any string that has more than four a’s together as well.
+
+All these strings will return true:
+
+let threeAs = "aaa";
+let fourAs = "aaaa";
+let sevenAs = "aaaaaaa";
+
+let myRegex = /a{2,4}/;
+myRegex.test(threeAs); // true
+myRegex.test(fourAs); // true
+myRegex.test(sevenAs); // true
+Hints
+Hint 1
+Remember to use \s after Oh{3,6} to include a white space, followed by no to pass all test cases. All test cases are written using a capital O, however the testcases could also be passed by using ignore-case : /oh{3,6}\sno/i
+
+Solutions
+
+Solution 1
+```js
+let ohStr = "Ohhh no";
+let ohRegex = /Oh{3,6}\sno/; // Change this line
+let result = ohRegex.test(ohStr);
+```
