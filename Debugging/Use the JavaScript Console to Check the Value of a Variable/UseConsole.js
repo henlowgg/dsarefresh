@@ -6,3 +6,6 @@ a++;
 
 let sumAB = a + b;
 console.log(sumAB);
+// just need to log a
+
+console.log(a);
