@@ -13,3 +13,4 @@ function forecast(arr) {
 
 // pass in the parameters (2, 4) in the slice method and return it
 
+// side note, you make a brand new array with this easily by naming a new variable before passing the .slice() method i.e., let randomFknArrName = originalArr.slice(0, 2);
