@@ -5,3 +5,5 @@ console.log(seven + three);
 
 // just add a typeof
 
+console.log(seven);
+console.log(three);
