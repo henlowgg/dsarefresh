@@ -6,3 +6,5 @@ function getNine() {
   
   let result = getNine;
   console.log(result);
+
+// just add () after getNine so it's getNine()
