@@ -19,8 +19,18 @@ let users = {
   
   function isEveryoneHere(userObj) {
     // Only change code below this line
-    
+    return ['Alan', 'Jeff', 'Sarah', 'Ryan'].every(name => userObj.hasOwnProperty(name));
     // Only change code above this line
   }
   
   console.log(isEveryoneHere(users));
+
+
+
+  /// possible way to do this however doesn't work with instructions
+
+//   if (userObj.hasOwnProperty(users)) {
+//     return true;
+//   } else {
+//     return false;
+//   };
