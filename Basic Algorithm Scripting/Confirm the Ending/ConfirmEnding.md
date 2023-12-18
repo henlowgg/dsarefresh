@@ -3,3 +3,109 @@ Check if a string (first argument, str) ends with the given target string (secon
 
 This challenge can be solved with the .endsWith() method, which was introduced in ES2015. But for the purpose of this challenge, we would like you to use one of the JavaScript substring methods instead.
 
+------------------
+
+
+
+function confirmEnding(string, target) {
+  return string;
+}
+confirmEnding("Bastian", "n");
+Provided test cases
+confirmEnding("Bastian", "n") should return true.
+
+confirmEnding("Connor", "n") should return false.
+
+confirmEnding("Walking on water and developing software from a specification are easy if both are frozen", "specification") should return false.
+
+largestOfFour([[4, 9, 1, 3], [13, 35, 18, 26], [32, 35, 97, 39], [1000000, 1001, 857, 1]]) should return [9, 35, 97, 1000000].
+
+confirmEnding("He has to give me a new name", "name")should return true.
+confirmEnding("Open sesame", "same") should return true.
+
+confirmEnding("Open sesame", "pen") should return false.
+
+confirmEnding("If you want to save our world, you must hurry. We dont know how much longer we can withstand the nothing", "mountain") should return false.
+
+Do not use the built-in method .endsWith() to solve the challenge.
+Approach #1: Confirm the Ending of a String With Built-In Functions — with substr()
+For this solution, you’ll use the String.prototype.substr() method:
+
+The substr() method returns the characters in a string beginning at the specified location through the specified number of characters.
+Why are you using string.substr(-target.length)?
+
+If the target.length is negative, the substr() method will start the counting from the end of the string, which is what you want in this code challenge.
+
+You don’t want to use string.substr(-1) to get the last element of the string, because if the target is longer than one letter:
+
+confirmEnding("Open sesame", "same")
+…the target won’t return at all.
+
+So here string.substr(-target.length) will get the last index of the string ‘Bastian’ which is ‘n’.
+
+Then you check whether string.substr(-target.length) equals the target (true or false).
+
+
+function confirmEnding(string, target) {
+  // Step 1. Use the substr method
+  if (string.substr(-target.length) === target) {
+  
+  // What does "if (string.substr(-target.length) === target)" represents?
+  // The string is 'Bastian' and the target is 'n' 
+  // target.length = 1 so -target.length = -1
+  // if ('Bastian'.substr(-1) === 'n')
+  // if ('n' === 'n')
+  
+  // Step 2. Return a boolean (true or false)
+    return true;
+  } else {
+    return false;
+  }
+}
+
+confirmEnding('Bastian', 'n');
+Without comments:
+
+
+function confirmEnding(string, target) {
+  if (string.substr(-target.length) === target) {
+    return true;
+  } else {
+    return false;
+  }
+}
+confirmEnding('Bastian', 'n');
+You can use a ternary operator as a shortcut for the if statement:
+
+(string.substr(-target.length) === target) ? true : false;
+This can be read as:
+
+if (string.substr(-target.length) === target) {
+    return true;
+} else {
+    return false;
+}
+You then return the ternary operator in your function:
+
+
+function confirmEnding(string, target) {
+  return (string.substr(-target.length) === target) ? true : false;
+}
+confirmEnding('Bastian', 'n');
+You can also refactor your code to make it more succinct by just returning the condition:
+
+function confirmEnding(string, target) {
+  return string.substr(-target.length) === target;
+}
+confirmEnding('Bastian', 'n');
+Approach #2: Confirm the Ending of a String With Built-In Functions — with endsWith()
+For this solution, you’ll use the String.prototype.endsWith() method:
+
+The endsWith() method determines whether a string ends with the characters of another string, returning true or false as appropriate. This method is case-sensitive.
+function confirmEnding(string, target) {
+  // We return the method with the target as a parameter
+  // The result will be a boolean (true/false)
+  return string.endsWith(target); // 'Bastian'.endsWith('n')
+}
+confirmEnding('Bastian', 'n');
+
