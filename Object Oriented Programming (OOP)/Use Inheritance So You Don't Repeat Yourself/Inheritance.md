@@ -37,3 +37,17 @@ Dog.prototype = {
 };
 The eat method is repeated in both Cat and Bear. Edit the code in the spirit of DRY by moving the eat method to the Animal supertype.
 
+-----------------
+
+Side Note:
+
+you can shorten the code for Bear and Cat objects themselves into one function rather than two however, since this is OOP and wanting to keep the code that way, we'll follow the guidelines but here's an example that seems to work
+
+```js
+function Bear(name) {
+    Bear.prototype.name = name;
+}
+```
+
+
+
