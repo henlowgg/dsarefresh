@@ -7,7 +7,8 @@ Dog.prototype = Object.create(Animal.prototype);
 
 // Only change code below this line
 
-
+Bird.prototype.constructor = Bird;
+Dog.prototype.constructor = Dog;
 
 let duck = new Bird();
 let beagle = new Dog();
