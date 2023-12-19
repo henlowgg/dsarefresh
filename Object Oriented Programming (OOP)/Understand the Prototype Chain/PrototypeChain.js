@@ -7,4 +7,11 @@ function Dog(name) {
   Dog.prototype.isPrototypeOf(beagle);  // yields true
   
   // Fix the code below so that it evaluates to true
-  ???.isPrototypeOf(Dog.prototype);
+  Object.prototype.isPrototypeOf(Dog.prototype);
+
+
+  // have to add Object.prototype
+
+  // it's just stating that Object is the overall daddy of all other objects in prototypes because all prototypes can have a prototype
+
+  // hence Object is daddy prototype
