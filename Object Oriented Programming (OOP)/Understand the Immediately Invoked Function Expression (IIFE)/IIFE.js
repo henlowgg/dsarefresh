@@ -1,9 +1,7 @@
-function makeNest() {
+(function () {
     console.log("A cozy nest is ready");
-  }
+})();
   
-  makeNest();
-
   /* 
   Remove the makeNest(); call
   remove the function name itself
