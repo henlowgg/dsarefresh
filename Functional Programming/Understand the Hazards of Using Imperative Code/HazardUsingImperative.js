@@ -21,7 +21,7 @@ const Window = function(tabs) {
     // Only change code below this line
   
     const tabsBeforeIndex = this.tabs.splice(0, index); // Get the tabs before the tab
-    const tabsAfterIndex = this.tabs.splice(index + 1); // Get the tabs after the tab
+    const tabsAfterIndex = this.tabs.splice(1); // Get the tabs after the tab
   
     this.tabs = tabsBeforeIndex.concat(tabsAfterIndex); // Join them together
   
@@ -41,3 +41,19 @@ const Window = function(tabs) {
     .join(videoWindow.tabClose(2)) // Close third tab in video window, and join
     .join(workWindow.tabClose(1).tabOpen());
   console.log(finalTabs.tabs);
+
+
+
+
+
+
+  /* 
+  just need to change line 23, it should be .splice(1) instead of .splice(index + 1)
+
+  using splice().This will create side effects (changes to the original array) and should be avoided in practice
+
+  by changing (index + 1) to (1), it makes it so after the second line is executed on the current array
+  ['Vimeo', 'Vine'], it will always omit the first value (index 0) and the one with index 1 until the end
+
+  this results in the proper array being returned
+  */
