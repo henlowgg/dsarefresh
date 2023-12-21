@@ -12,3 +12,33 @@ The map method iterates over each item in an array and returns a new array conta
 When the callback is used, it is passed three arguments. The first argument is the current element being processed. The second is the index of that element and the third is the array upon which the map method was called.
 
 See below for an example using the map method on the users array to return a new array containing only the names of the users as elements. For simplicity, the example only uses the first argument of the callback.
+
+
+
+
+
+----------------
+
+
+Hint 1
+array.prototype.map takes a function as in input and returns an array. The returned array includes elements that is processed by the function. This function takes individual elements as input.
+
+Solutions
+Solution 1
+```js
+const ratings = watchList.map(item => ({
+  title: item["Title"],
+  rating: item["imdbRating"]
+}));
+```
+Code Explanation
+
+Using ES6 notation, each item in array is processed to extract title and rating.
+Parantheses are needed to return an object.
+
+Solution 2
+```js
+const ratings = watchList.map(({ Title: title, imdbRating: rating }) => ({title, rating}));
+```
+Code Explanation
+Using parameter destructuring, the title and rating are extracted and returned in an object. Parantheses are needed to return an object.
