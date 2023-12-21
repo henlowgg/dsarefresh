@@ -10,6 +10,14 @@ let bird = {
   
   // Only change code below this line
 
+  let glideMixin = function(obj) {
+    obj.glide = function() {
+        console.log("");
+    }
+  }
+  glideMixin(bird);
+  glideMixin(boat);
+
   /* 
   We want to create a mixin named glideMixin as a function that defines a method named
   glide.
