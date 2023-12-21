@@ -1,7 +1,11 @@
 function Bird() {
-    this.weight = 15;
-  
-  
+    // declare weight = 15 as a private variable
+    let weight = 15;
+
+    // method within the Bird function that returns the value of the variable 'weight'
+    this.getWeight = function () {
+        return weight;
+    }
   }
 
   // basically making it so that we are making public properties private
