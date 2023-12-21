@@ -1,4 +1,20 @@
-let isCuteMixin = function(obj) {
+let funModule = (function () {
+    return {
+        isCuteMixin: function(obj) {
+            obj.isCute = function() {
+                return true;
+            };
+        },
+        singMixin: function(obj) {
+            obj.sing = function() {
+                console.log("Singing to an awesome tune");
+            };
+        }
+    }
+})();
+
+
+/* let isCuteMixin = function(obj) {
     obj.isCute = function() {
       return true;
     };
@@ -7,4 +23,11 @@ let isCuteMixin = function(obj) {
     obj.sing = function() {
       console.log("Singing to an awesome tune");
     };
-  };
+  }; */
+
+  /* 
+  need to rewrite the whole thing pretty much
+
+  wrap everything in a function called funModule that returns the mixed behaviors within the object
+  
+  */
