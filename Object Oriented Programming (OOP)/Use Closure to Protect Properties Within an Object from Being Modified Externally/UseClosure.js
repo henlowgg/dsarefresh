@@ -3,3 +3,5 @@ function Bird() {
   
   
   }
+
+  // basically making it so that we are making public properties private
