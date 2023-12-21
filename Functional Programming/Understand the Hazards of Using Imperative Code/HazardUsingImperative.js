@@ -57,3 +57,6 @@ const Window = function(tabs) {
 
   this results in the proper array being returned
   */
+
+  // alternatively you can replace splice with slice and keep the code the way it was, however it shouldn't be used in practice
+  // as it modifies the contents it is working on
