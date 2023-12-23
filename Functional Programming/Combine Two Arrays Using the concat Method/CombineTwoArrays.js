@@ -1,6 +1,7 @@
 function nonMutatingConcat(original, attach) {
     // Only change code below this line
   
+    return original.concat(attach)
   
     // Only change code above this line
   }
@@ -8,3 +9,8 @@ function nonMutatingConcat(original, attach) {
   const first = [1, 2, 3];
   const second = [4, 5];
   nonMutatingConcat(first, second);
+
+  // all that is needed is to return attach to the end of original
+
+// to attach something as a return, it is written as x.concat(y)
+// where x is the first variable in the function and y is the second
