@@ -1,6 +1,8 @@
 function nonMutatingPush(original, newItem) {
     // Only change code below this line
-    return original.push(newItem);
+
+    // change .push to .concat, makes it so that it merges new items to the end of an array without any mutating side effects
+    return original.concat(newItem);
   
     // Only change code above this line
   }
