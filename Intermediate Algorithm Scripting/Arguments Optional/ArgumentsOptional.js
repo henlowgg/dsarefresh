@@ -1,5 +1,8 @@
 function addTogether() {
-    return false;
-  }
+    const [first, second] = arguments;
   
-  addTogether(2,3);
+    if (typeof (first) === "number") {
+      if (typeof (second) === "number") return first + second;
+      if (arguments.length === 1) return (second) => addTogether(first, second);
+    }
+  }
