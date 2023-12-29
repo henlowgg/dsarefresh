@@ -17,3 +17,9 @@ IV	4
 I	1
 All roman numerals answers should be provided in upper-case.
 
+
+----------------
+
+
+Create a mapping: Define a list of Roman numeral symbols and their corresponding integer values.
+Build the Roman numeral: Iterate through the mapping and repeatedly subtract the integer values from the number, appending the corresponding Roman numeral symbols to the result.
