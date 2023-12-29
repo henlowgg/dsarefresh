@@ -19,3 +19,12 @@ function rot13(str) {
 
 // Test the function
 console.log(rot13("SERR PBQR PNZC"));  // "FREE CODE CAMP"
+
+
+/* 
+We use split('') to convert the string into an array of characters.
+map is used to transform each character.
+For each character, we check if it is an uppercase letter. If it is, we find its char code using charCodeAt(0) and add 13.
+If adding 13 goes beyond 'Z' (char code 90), we subtract 26 to wrap around to the start of the alphabet.
+Finally, join('') reassembles the array of characters back into a string.
+*/

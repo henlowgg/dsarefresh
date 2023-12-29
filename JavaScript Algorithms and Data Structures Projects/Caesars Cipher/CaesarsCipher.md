@@ -7,3 +7,11 @@ Write a function which takes a ROT13 encoded string as input and returns a decod
 
 All letters will be uppercase. Do not transform any non-alphabetic character (i.e. spaces, punctuation), but do pass them on.
 
+---------------
+
+
+
+Iterate over each character in the string: For each character, we need to determine if it is an uppercase letter.
+Shift the letter: If the character is a letter, shift it by 13 places in the alphabet.
+Handle wrapping around the alphabet: If the shift goes past 'Z', it should wrap around to the beginning of the alphabet.
+Preserve non-alphabetic characters: Non-alphabetic characters should remain unchanged.
