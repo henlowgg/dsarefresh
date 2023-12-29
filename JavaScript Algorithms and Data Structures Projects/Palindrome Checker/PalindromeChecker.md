@@ -8,3 +8,10 @@ Note: You'll need to remove all non-alphanumeric characters (punctuation, spaces
 We'll pass strings with varying formats, such as racecar, RaceCar, and race CAR among others.
 
 We'll also pass strings with special symbols, such as 2A3*3a2, 2A3 3a2, and 2_A3*3#A2.
+
+------------
+
+
+Normalize the string: Remove all non-alphanumeric characters and convert all letters to the same case (lowercase or uppercase).
+Check for palindrome: Compare the string with its reverse to see if they are the same.
+
