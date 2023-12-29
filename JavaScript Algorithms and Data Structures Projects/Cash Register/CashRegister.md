@@ -34,3 +34,11 @@ See below for an example of a cash-in-drawer array:
   ["TWENTY", 60],
   ["ONE HUNDRED", 100]
 ]
+
+------------
+
+
+Calculate Change Due: Subtract the price from the cash given.
+Check Total Cash in Drawer: Sum up all the cash in the drawer.
+Determine the Status: Based on the total cash and the change due, decide if the status is "INSUFFICIENT_FUNDS", "CLOSED", or "OPEN".
+Calculate Change in Currency: If status is "OPEN", calculate the change in terms of currency units.
